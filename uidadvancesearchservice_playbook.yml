@@ -1,0 +1,11 @@
+---
+- name: Create pods 
+  hosts: kubernetes  
+ 
+  tasks: 
+  - name: create a deployment
+    command: kubectl apply -f deployment_uidadvancesearchservice.yaml
+    
+  tasks: 
+  - name: create a services
+    command: kubectl apply -f np_service_uidadvancesearchservice.yaml
